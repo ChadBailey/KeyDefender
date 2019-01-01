@@ -24,6 +24,7 @@ Menu, Resolutions, Add, Kindle, Res_Kindle
 Menu, Tray, Add, Resolution, :Resolutions
 
 Menu, Tray, Add ; line separator
+Menu, Tray, Add, Swap Monitor (Ctrl+Alt+Q), SwapWindowMonitor
 Menu, Tray, Add, E&xit, ButtonExit ;add a item named Exit that goes to the ButtonExit label
 
 ;;; Set sendmode
@@ -47,58 +48,57 @@ initialize:
   alttab := 1
 
   UpdateResolutionCheckMark()
-
-Return
-
+return
 
 Disable_Capslock:
-  menu, tray, ToggleCheck, Immunize &CapsLock
+  menu, tray, ToggleCheck, Disable &CapsLock
   clock := !clock ; toggle
-Return
+return
 
 Disable_LWin:
   menu, tray, ToggleCheck, Disable Left &Winkey
   lwin := !lwin ; toggle
-Return
+return
 
 Disable_AltTab:
   menu, tray, ToggleCheck, Disable &Alt-Tab
   alttab := !alttab ; toggle
-Return
+return
 
 Disable_Insert:
   menu, tray, ToggleCheck, Disable &Insert
   insert := !insert ; toggle
-Return
+return
 
 Disable_F1:
   menu, tray, ToggleCheck, Disable &F1
   F1 := !F1 ; toggle
-Return
+return
 
 Res_4k:
   ChangeResolution(3840, 2160)
   UpdateResolutionCheckMark()
-Return
+return
 
 Res_1080:
   ChangeResolution(1920, 1080)
   UpdateResolutionCheckMark()
-Return
+return
 
 Res_720:
   ChangeResolution(1280, 720)
   UpdateResolutionCheckMark()
-Return
+return
 
 Res_Kindle:
   ChangeResolution(1366, 768)
   UpdateResolutionCheckMark()
-Return
+return
+
 
 ButtonExit:
   ExitApp
-Return ; redundant but my OCD insisted
+return ; redundant but my OCD insisted
 
 
 ;;;;;;;;;;;;;
@@ -137,6 +137,46 @@ UpdateResolutionCheckMark() {
   }
 }
 
+
+SwapWindowMonitor() {
+  leftMonitorWidth = 1400
+  leftMonitorHeight = 1050
+  rightMonitorWidth = 1920
+  rightMonitorHeight = 1200
+  activeWindow := WinActive("A")
+
+  if (activeWindow = 0) {
+    return
+  }
+  WinGet, minMax, MinMax, ahk_id %activeWindow%
+  if (minMax = 1) {
+    WinRestore, ahk_id %activeWindow%
+  }
+  WinGetPos, x, y, width, height, ahk_id %activeWindow%
+  if (x < 0) {
+    xScale := rightMonitorWidth / leftMonitorWidth
+    yScale := rightMonitorHeight / leftMonitorHeight
+    x := leftMonitorWidth + x
+    newX := x * xScale
+    newY := y * yScale
+    newWidth := width * xScale
+    newHeight := height * yScale
+  }
+  else {
+    xScale := leftMonitorWidth / rightMonitorWidth
+    yScale := leftMonitorHeight / rightMonitorHeight
+    newX := x * xScale
+    newY := y * yScale
+    newWidth := width * xScale
+    newHeight := height * yScale
+    newX := newX - leftMonitorWidth
+  }
+  WinMove, ahk_id %activeWindow%, , %newX%, %newY%, %newWidth%, %newHeight%
+  if (minMax = 1) {
+    WinMaximize, ahk_id %activeWindow%
+  }
+  WinActivate ahk_id %activeWindow%   ;Needed - otherwise another window may overlap it
+}
 
 ; Code taken (and adapted) from https://autohotkey.com/board/topic/114598-borderless-windowed-mode-forced-fullscreen-script-toggle/
 
@@ -208,24 +248,26 @@ GetMonitorResolution() {
 
 ChangeResolution(Screen_Width := 1920, Screen_Height := 1080, Color_Depth := 32, Hz:=0) {
 	VarSetCapacity(Device_Mode,156,0)
-	NumPut(156,Device_Mode,36) 
+	NumPut(156,Device_Mode,36)
 	DllCall( "EnumDisplaySettingsA", UInt,0, UInt,-1, UInt,&Device_Mode )
-	NumPut(0x5c0000,Device_Mode,40) 
+	NumPut(0x5c0000,Device_Mode,40)
 	NumPut(Color_Depth,Device_Mode,104)
 	NumPut(Screen_Width,Device_Mode,108)
 	NumPut(Screen_Height,Device_Mode,112)
   if (Hz > 0) {
     NumPut(Hz,Device_Mode,120)
   }
-	Return DllCall( "ChangeDisplaySettingsA", UInt,&Device_Mode, UInt,0 )
+	return DllCall( "ChangeDisplaySettingsA", UInt,&Device_Mode, UInt,0 )
 }
-Return
 
 ;;;;;;;;;;;;
 ; Keybinds ;
 ;;;;;;;;;;;;
 
+;Ctrl+F12
 ^F12::ToggleFullscreen()
+;Ctrl+Alt+Q
+^!q::SwapWindowMonitor()
 
 ; Non-Immunize version. Works fine, but doesn't allow you to utilize the toggle-state of capslock.
 
@@ -236,54 +278,54 @@ Return
   ;Best method, turns caps lock off as soon as the user lets go
     Send,{Capslock}
     While GetKeyState("Capslock","P") ; While loop prevents "thrashing" of key/light/state
-      Sleep 5 ; optimization to reduce cpu usage - possibly too aggressive
+    Sleep 5 ; optimization to reduce cpu usage - possibly too aggressive
     keywait, Capslock
     SetCapslockState, Off
   }
   ;Emulate default functionality of capslock
   ;(why can't autohotkey have a way to just use default behavior? maybe I just haven't found it)
-  Else {
+  else {
     if GetKeyState("CapsLock", "T") = 1 {
-       SetCapsLockState, off
+      SetCapsLockState, off
      }
     else if GetKeyState("CapsLock", "F") = 0 {
-       SetCapsLockState, on
+      SetCapsLockState, on
      }
    }
 return
 
 ~LWin Up::
   if (lwin = 1) {
-    Return
+    return
   }
-  Else {
+  else {
     Send, {LWin}
   }
-Return
+return
 
 !Tab::
   if (alttab = 1) {
-    Return
+    return
   }
-  Else {
+  else {
     Send, {AltDown}{Tab}
   }
-Return
+return
 
 $Insert::
   if (insert = 1) {
-    Return
+    return
   }
-  Else {
+  else {
     Send, {Insert}
   }
 return
 
 $F1::
   if (F1 = 1) {
-    Return
+    return
   }
-  Else {
+  else {
     Send, {F1}
   }
 return
