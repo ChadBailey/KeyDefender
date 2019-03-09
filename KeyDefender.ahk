@@ -41,12 +41,6 @@ initialize:
   menu, tray, ToggleCheck, Disable &CapsLock
   clock := 1
 
-  menu, tray, ToggleCheck, Disable Left &Winkey
-  lwin := 1
-
-  menu, tray, ToggleCheck, Disable &Alt-Tab
-  alttab := 1
-
   UpdateResolutionCheckMark()
 return
 
@@ -294,7 +288,7 @@ ChangeResolution(Screen_Width := 1920, Screen_Height := 1080, Color_Depth := 32,
    }
 return
 
-~LWin Up::
+LWin Up::
   if (lwin = 1) {
     return
   }
