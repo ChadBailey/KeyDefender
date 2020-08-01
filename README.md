@@ -23,18 +23,18 @@ Here is a complete list of the current capabilities.
 
 | Hotkey            | Function            | Default   | Notes/Description                                   |
 | ---               | ---                 | ---       | ---                                                 |
-| `CTRL+F12`        | Borderles Fullscreen| N/A       | Toggles borderless fullscreen in any active application.<br>**NOTE: Does not work well with some window types. Intended for use with games. Works with nearly every game tested, even some which are known to not work with other borderless fullscreen software.** |
-| `CTRL+ALT+Q`      | Quick Swap Monitor  | N/A       | Quickly swaps active application from one monitor to the next.<br>**NOTE: This was built in order to fix poorly coded programs from appearing on a display that's no longer connected. Alternately, it can be helpful when using remote access software that does not support multiple displays. There are strange hard coded values for monitor sizes, but in my testing this works for any resolution. I can not recall why the hard coded values but I've left them alone since it works.** |
-| Right-click Menu  | Disable Capslock    | On        | Toggles capslock off as soon as the key is released<br>**NOTE: *Does not* prevent keymapping** |
-| Right-click Menu  | Disable Left WinKey | Off       | Prevents left Windows key from opening windows menu<br>**NOTE1: *Does not* prevent keymapping**<br>**NOTE2: *Does not* block windows key combinations so for exanple Win + L will still lock your PC** |
-| Right-click Menu  | Disable Alt-Tab     | Off       | Prevents alt-tab menu from appearing.<br>**NOTE: *Does not* prevent keymapping**|
-| Right-click Menu  | Disable Insert      | Off       | Prevents insert from toggling insert (causes your<br>keystrokes to overwrite existing text if your<br>cursor is not at the end of the line)<br>**NOTE: *Does* prevent keymapping**|
-| Right-click Menu  | Disable F1          | Off       | Disables F1<br>**NOTE: *Does* prevent keymapping**  |
-| Right-click Menu  | Resolution > 4k     | N/A       | Instantly sets resolution to 3840x2160<br>**CAUTION: USE WITH CARE. BYPASSES WINDOWS CONFIRM/REVERT DIALOG**|
-| Right-click Menu  | Resolution > 1080p  | N/A       | Instantly sets resolution to 1920x1080<br>**CAUTION: USE WITH CARE. BYPASSES WINDOWS CONFIRM/REVERT DIALOG**|
-| Right-click Menu  | Resolution > 720p   | N/A       | Instantly sets resolution to 1280x720<br>**CAUTION: USE WITH CARE. BYPASSES WINDOWS CONFIRM/REVERT DIALOG**|
-| Right-click Menu  | Resolution > Kindle | N/A       | Instantly sets resolution to 1366x768<br>**CAUTION: USE WITH CARE. BYPASSES WINDOWS CONFIRM/REVERT DIALOG**|
-| Right-click Menu  | Swap Monitor (CTRL+Alt+Q) | N/A       | Does not do anything (Only provided to remind user<br>what the hotkey combination is)|
+| `CTRL+F12`        | Borderles Fullscreen| N/A       | Toggles borderless fullscreen in any active application.<br><br>**NOTE: Does not work well with some window types. Intended for use with games. Works with nearly every game tested, even some which are known to not work with other borderless fullscreen software.** |
+| `CTRL+ALT+Q`      | Quick Swap Monitor  | N/A       | Quickly swaps active application from one monitor to the next.<br><br>**NOTE: This was built in order to fix poorly coded programs from appearing on a display that's no longer connected. Alternately, it can be helpful when using remote access software that does not support multiple displays. There are strange hard coded values for monitor sizes, but in my testing this works for any resolution. I can not recall why the hard coded values but I've left them alone since it works.** |
+| Right-click Menu  | Disable Capslock    | On        | Toggles capslock off as soon as the key is released<br><br>**NOTE: *Does not* prevent keymapping** |
+| Right-click Menu  | Disable Left WinKey | Off       | Prevents left Windows key from opening windows menu<br><br>**NOTE1: *Does not* prevent keymapping**<br>**NOTE2: *Does not* block windows key combinations so for exanple Win + L will still lock your PC** |
+| Right-click Menu  | Disable Alt-Tab     | Off       | Prevents alt-tab menu from appearing.<br><br>**NOTE: *Does not* prevent keymapping**|
+| Right-click Menu  | Disable Insert      | Off       | Prevents insert from toggling insert (causes your keystrokes to overwrite existing text if your<br>cursor is not at the end of the line)<br>**NOTE: *Does* prevent keymapping**|
+| Right-click Menu  | Disable F1          | Off       | Disables F1<br><br>**NOTE: *Does* prevent keymapping**  |
+| Right-click Menu  | Resolution > 4k     | N/A       | Instantly sets resolution to 3840x2160<br><br>**CAUTION: USE WITH CARE. BYPASSES WINDOWS CONFIRM/REVERT DIALOG**|
+| Right-click Menu  | Resolution > 1080p  | N/A       | Instantly sets resolution to 1920x1080<br><br>**CAUTION: USE WITH CARE. BYPASSES WINDOWS CONFIRM/REVERT DIALOG**|
+| Right-click Menu  | Resolution > 720p   | N/A       | Instantly sets resolution to 1280x720<br><br>**CAUTION: USE WITH CARE. BYPASSES WINDOWS CONFIRM/REVERT DIALOG**|
+| Right-click Menu  | Resolution > Kindle | N/A       | Instantly sets resolution to 1366x768<br><br>**CAUTION: USE WITH CARE. BYPASSES WINDOWS CONFIRM/REVERT DIALOG**|
+| Right-click Menu  | Swap Monitor (CTRL+Alt+Q) | N/A       | Does not do anything (Only provided to remind user what the hotkey combination is)|
 
 
 
