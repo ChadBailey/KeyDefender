@@ -13,43 +13,15 @@ Here is a complete list of the current capabilities.
 | ---               | ---                 | ---       | ---                                                 |
 | `CTRL+ALT+Q`      | Quick Swap Monitor  | N/A       | Quickly swaps active application from one monitor<br>to the next.<br>**NOTE: This was built in order to fix poorly coded<br>programs from appearing on a display that's no <br>longer connected. Alternately, it can be helpful <br>when using remote access software that does not <br>support multiple displays. There are strange hard <br>coded values for monitor sizes, but in my testing <br>this works for any resolution. I can not recall why <br>the hard coded values but I've left them alone<br>since it works.** |
 | Right-click Menu  | Disable Capslock    | On        | Toggles capslock off as soon as the key is released<br>**NOTE: *Does not* prevent keymapping** |
-
-
-
-| Right-click Menu  | Disable Left WinKey | Off       | Prevents left Windows key from opening windows menu |
-|                   |                     |           | **NOTE1: *Does not* prevent keymapping**            |
-|                   |                     |           | **NOTE2: *Does not* block windows key combinations  |
-|                   |                     |           | so for exanple Win + L will still lock your PC**    |
-| Right-click Menu  | Disable Alt-Tab     | Off       | Prevents alt-tab menu from appearing.               |
-|                   |                     |           | **NOTE: *Does not* prevent keymapping**             |
-|                   |                     |           |                                                     |
-| Right-click Menu  | Disable Insert      | Off       | Prevents insert from toggling insert (causes your   |
-|                   |                     |           | keystrokes to overwrite existing text if your       |
-|                   |                     |           | cursor is not at the end of the line)               |
-|                   |                     |           | **NOTE: *Does* prevent keymapping**                 |
-|                   |                     |           |                                                     |
-| Right-click Menu  | Disable F1          | Off       | Disables F1                                         |
-|                   |                     |           | **NOTE: *Does* prevent keymapping**                 |
-|                   |                     |           |                                                     |
-| Right-click Menu  | Resolution > 4k     | N/A       | Instantly sets resolution to 3840x2160              |
-|                   |                     |           | **CAUTION: USE WITH CARE. BYPASSES WINDOWS          | 
-|                   |                     |           | CONFIRM/REVERT DIALOG**                             |
-|                   |                     |           |                                                     |
-| Right-click Menu  | Resolution > 1080p  | N/A       | Instantly sets resolution to 1920x1080              |
-|                   |                     |           | **CAUTION: USE WITH CARE. BYPASSES WINDOWS          | 
-|                   |                     |           | CONFIRM/REVERT DIALOG**                             |
-|                   |                     |           |                                                     |
-| Right-click Menu  | Resolution > 720p   | N/A       | Instantly sets resolution to 1280x720               |
-|                   |                     |           | **CAUTION: USE WITH CARE. BYPASSES WINDOWS          | 
-|                   |                     |           | CONFIRM/REVERT DIALOG**                             |
-|                   |                     |           |                                                     |
-| Right-click Menu  | Resolution > Kindle | N/A       | Instantly sets resolution to 1366x768               |
-|                   |                     |           | **CAUTION: USE WITH CARE. BYPASSES WINDOWS          | 
-|                   |                     |           | CONFIRM/REVERT DIALOG**                             |
-|                   |                     |           |                                                     |
-| Right-click Menu  | Swap Monitor (CTRL+ | N/A       | Does not do anything (Only provided to remind user  |
-|                   | Alt+Q)              |           | what the hotkey combination is)                     |
-|                   |                     |           |                                                     |
+| Right-click Menu  | Disable Left WinKey | Off       | Prevents left Windows key from opening windows menu<br>**NOTE1: *Does not* prevent keymapping**<br>**NOTE2: *Does not* block windows key combinations<br>so for exanple Win + L will still lock your PC** |
+| Right-click Menu  | Disable Alt-Tab     | Off       | Prevents alt-tab menu from appearing.<br>**NOTE: *Does not* prevent keymapping**|
+| Right-click Menu  | Disable Insert      | Off       | Prevents insert from toggling insert (causes your<br>keystrokes to overwrite existing text if your<br>cursor is not at the end of the line)<br>**NOTE: *Does* prevent keymapping**|
+| Right-click Menu  | Disable F1          | Off       | Disables F1<br>**NOTE: *Does* prevent keymapping**  |
+| Right-click Menu  | Resolution > 4k     | N/A       | Instantly sets resolution to 3840x2160<br>**CAUTION: USE WITH CARE. BYPASSES WINDOWS CONFIRM/REVERT DIALOG**|
+| Right-click Menu  | Resolution > 1080p  | N/A       | Instantly sets resolution to 1920x1080<br>**CAUTION: USE WITH CARE. BYPASSES WINDOWS CONFIRM/REVERT DIALOG**|
+| Right-click Menu  | Resolution > 720p   | N/A       | Instantly sets resolution to 1280x720<br>**CAUTION: USE WITH CARE. BYPASSES WINDOWS CONFIRM/REVERT DIALOG**|
+| Right-click Menu  | Resolution > Kindle | N/A       | Instantly sets resolution to 1366x768<br>**CAUTION: USE WITH CARE. BYPASSES WINDOWS CONFIRM/REVERT DIALOG**|
+| Right-click Menu  | Swap Monitor (CTRL+Alt+Q) | N/A       | Does not do anything (Only provided to remind user<br>what the hotkey combination is)|
 
 
 
