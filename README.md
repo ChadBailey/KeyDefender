@@ -22,15 +22,17 @@ Here is a complete list of the current capabilities.
 |                   |                     |           | this works for any resolution. I can not recall why |
 |                   |                     |           | the hard coded values but I've left them alone      |
 |                   |                     |           | since it works.**                                   |
-|                   |                     |           |                                                     |
+| ---               | ---                 | ---       | ---                                                 |
 | Right-click Menu  | Disable Capslock    | On        | Toggles capslock off as soon as the key is released |
 |                   |                     |           | **NOTE: *Does not* prevent keymapping**             |
-|                   |                     |           |                                                     |
+| ---               | ---                 | ---       | ---                                                 |
+
+
+
 | Right-click Menu  | Disable Left WinKey | Off       | Prevents left Windows key from opening windows menu |
 |                   |                     |           | **NOTE1: *Does not* prevent keymapping**            |
 |                   |                     |           | **NOTE2: *Does not* block windows key combinations  |
 |                   |                     |           | so for exanple Win + L will still lock your PC**    |
-|                   |                     |           |                                                     |
 | Right-click Menu  | Disable Alt-Tab     | Off       | Prevents alt-tab menu from appearing.               |
 |                   |                     |           | **NOTE: *Does not* prevent keymapping**             |
 |                   |                     |           |                                                     |
