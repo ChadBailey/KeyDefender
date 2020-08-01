@@ -9,8 +9,21 @@ Here is a complete list of the current capabilities.
 
 # Abilities
 
+## Usage Notes
+
+> NOTE: The resolution toggles were built to be used to assist changing 
+> the resolution via remote access which can be problematic at best. 
+> i.e. Shadow.tech, Parsec, Moonlight-Stream, QEMU, etc.
+> 
+> This is why they intentionally bypass all confirmation dialogs (since 
+> often times you can't get logged back in in time to press the confirm 
+> dialog)
+
+## Table
+
 | Hotkey            | Function            | Default   | Notes/Description                                   |
 | ---               | ---                 | ---       | ---                                                 |
+| `CTRL+F12`        | Borderles Fullscreen| N/A       | Toggles borderless fullscreen in any active application.<br>**NOTE: Does not work well with some window types. Intended for use with games. Works with nearly every game tested, even some which are known to not work with other borderless fullscreen software. |
 | `CTRL+ALT+Q`      | Quick Swap Monitor  | N/A       | Quickly swaps active application from one monitor<br>to the next.<br>**NOTE: This was built in order to fix poorly coded<br>programs from appearing on a display that's no <br>longer connected. Alternately, it can be helpful <br>when using remote access software that does not <br>support multiple displays. There are strange hard <br>coded values for monitor sizes, but in my testing <br>this works for any resolution. I can not recall why <br>the hard coded values but I've left them alone<br>since it works.** |
 | Right-click Menu  | Disable Capslock    | On        | Toggles capslock off as soon as the key is released<br>**NOTE: *Does not* prevent keymapping** |
 | Right-click Menu  | Disable Left WinKey | Off       | Prevents left Windows key from opening windows menu<br>**NOTE1: *Does not* prevent keymapping**<br>**NOTE2: *Does not* block windows key combinations<br>so for exanple Win + L will still lock your PC** |
@@ -25,14 +38,6 @@ Here is a complete list of the current capabilities.
 
 
 
-> NOTE: The resolution toggles were built to be used to assist changing 
-> the resolution via remote access which can be problematic at best. 
-> i.e. Shadow.tech, Parsec, Moonlight-Stream, QEMU, etc.
-> 
-> This is why they intentionally bypass all confirmation dialogs (since 
-> often times you can't get logged back in in time to press the confirm 
-> dialog)
-
 
 # Contributing
 
@@ -41,6 +46,8 @@ priorities. If you would like to contribute, please do! Here is a list of
 things I hope to one day implement
 
 ## Feature Backlog
+ - Fix hard coding of monitor hz within resolution swap (ideally, maintain
+   existing refresh rate and maybe even add a refresh rate swapper)
  - Remove quick-swap monitor hard coding, and extend to support n number
    of monitors (each keypress should just advance to next monitor)
  - Confirm dialog on resolution toggle
