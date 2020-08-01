@@ -11,19 +11,8 @@ Here is a complete list of the current capabilities.
 
 | Hotkey            | Function            | Default   | Notes/Description                                   |
 | ---               | ---                 | ---       | ---                                                 |
-| `CTRL+ALT+Q`      | Quick Swap Monitor  | N/A       | Quickly swaps active application from one monitor<br> 
-to the next.<br>
-**NOTE: This was built in order to fix poorly coded <br>
-programs from appearing on a display that's no <br>
-longer connected. Alternately, it can be helpful <br>
-when using remote access software that does not <br>
-support multiple displays. There are strange hard <br>
-coded values for monitor sizes, but in my testing <br>
-this works for any resolution. I can not recall why <br>
-the hard coded values but I've left them alone<br> 
-since it works.**                                                                                           |
-| Right-click Menu  | Disable Capslock    | On        | Toggles capslock off as soon as the key is released<br>
-**NOTE: *Does not* prevent keymapping**                                                                     |
+| `CTRL+ALT+Q`      | Quick Swap Monitor  | N/A       | Quickly swaps active application from one monitor<br>to the next.<br>**NOTE: This was built in order to fix poorly coded<br>programs from appearing on a display that's no <br>longer connected. Alternately, it can be helpful <br>when using remote access software that does not <br>support multiple displays. There are strange hard <br>coded values for monitor sizes, but in my testing <br>this works for any resolution. I can not recall why <br>the hard coded values but I've left them alone<br>since it works.** |
+| Right-click Menu  | Disable Capslock    | On        | Toggles capslock off as soon as the key is released<br>**NOTE: *Does not* prevent keymapping** |
 
 
 
